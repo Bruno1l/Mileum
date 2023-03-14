@@ -1,0 +1,71 @@
+.box-container {
+    border-top: 6px solid  #DAF439 ;
+    background-color: white;
+    padding: 32px 48px;
+    box-shadow: 36px 21px 30px rgba(0, 0, 0, 0.25);
+
+    
+
+    p, h3 {
+      color: #0D0D0C;
+    }
+
+    @include reponsive (s) {
+      margin-top: 32px;
+      width: 100%;
+    }
+
+   
+
+
+    
+
+   
+    
+}
+
+
+label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

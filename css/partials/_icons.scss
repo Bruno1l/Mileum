@@ -1,0 +1,86 @@
+.icon {
+        background-size: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: .6s ease-in;
+        cursor: pointer;
+
+        &:hover {
+            &::after {
+                transform: scale(1.2);
+            }
+        }
+
+}
+
+.icon-Earth {
+    &::after {
+        background-image: url('../svg/Earth.svg');
+        @extend.icon;
+    }
+
+       
+    
+}
+
+.icon-Cart {
+    &::after {
+        background-image: url('../svg/Cart.svg');
+        @extend.icon;
+    }
+
+        
+    
+}
+
+.icon-Onepage {
+    &::after {
+        background-image: url('../svg/Onepage.svg');
+        @extend.icon;
+    }
+
+        
+    
+}
+.icon-Send {
+    &::after {
+        background-image: url('../svg/Send.svg');
+        @extend.icon;
+    }
+
+       
+    
+}
+
+.icon-Social-1 {
+    &::after {
+        background-image: url('../svg/Social-1.svg');
+        margin-top: -10px;
+        @extend.icon;
+    }
+
+       
+    
+}
+
+.icon-Social-2 {
+    &::after {
+        background-image: url('../svg/Social-2.svg');
+        margin-top: -10px;
+        @extend.icon;
+    }
+
+       
+    
+}
+
+.icon-Social-3 {
+    &::after {
+        background-image: url('../svg/Social-3.svg');
+        margin-top: -10px;
+        @extend.icon;
+    }
+
+       
+    
+}
