@@ -1,0 +1,38 @@
+footer {
+    
+    width: 100%;
+    
+    border-top: 1px $trasparent-color dashed;
+   
+
+    .footer_container {
+        max-width: $container-xl;
+        align-items: center;
+        margin: 0 auto;
+        padding: 15px 32px;
+        display: flex;
+
+        @include reponsive(s){
+            flex-direction: column;
+        }
+
+        
+        
+        
+    
+       
+    }
+    
+}
+
+.contact-icons {
+    display: inline-flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+        padding: 2px 16px;
+    }
+}

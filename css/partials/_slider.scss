@@ -1,0 +1,153 @@
+.box {
+    width: $container-xl;
+    padding: 96px 0px 96px 32px;
+    margin: 0 auto;
+
+    @include reponsive(s) {
+        width: 100%;
+        padding: 32px 32px;
+        
+    }
+
+}
+
+
+
+.wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .carousel {
+        white-space: nowrap;
+    
+    }
+    
+
+    
+
+}
+
+.carousel {
+    perspective: 100px;
+    animation: scroll 55s linear infinite;
+
+    &:hover {
+        transition: 2s;
+        animation-play-state: paused ;
+    }
+   
+    
+}
+
+
+
+
+.carousel img {   
+    width: calc(95px * 7);
+    
+
+    @include reponsive(s) {
+       width: calc(60px *7);
+    }
+}
+
+
+
+.wrapper::before, .wrapper::after  {
+    background: linear-gradient(to right,#0d0d0c5b 0%, rgba(255,255,255,0) 80% );
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.wrapper::after {
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+
+
+.carousel img {
+    transition: transform 1s;
+    cursor: pointer;
+
+    &:hover { 
+        margin-left: 3px;
+        transform: translateZ(1px) ;
+        box-shadow: 44px 22px 22px rgba(29, 29, 29, 0.123);
+    
+    }
+
+}
+
+
+.faixa {
+   padding: 24px 0;
+   margin: 0;
+   display: flex;
+   overflow-x: hidden;
+
+    background-color: $primary-normal;
+    transform: rotate(0deg);
+    
+    
+
+    &::before, &::after {
+        background: linear-gradient(to right,#0d0d0ccb 0%, rgba(255,255,255,0) 80% );
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 15%;
+        pointer-events: none;
+        z-index: 2;
+        top: 0;
+       
+
+    }
+
+    
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        margin: 0 30px;
+
+       
+
+       h3 {
+        color: #0d0d0c74;
+       }
+
+       img {
+        margin-right: 11px;
+        
+       }
+    }
+
+   
+   
+}
+
+.faixa::after {
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,100 @@
+a {
+    @include typeface-2(p1, desktop);
+    text-decoration: none;
+    color: $primary-gray;
+   
+
+    &:hover {
+        transition: .5s ease;
+        text-decoration:underline $primary-normal;
+        color: $primary-light;
+
+    }
+    
+}
+
+
+.btn-2 
+{
+    font-family: 'DM Sans';
+    border: 1px solid #0d0d0c44;
+    padding: 8px 32px;
+    font-weight: 500;
+    color: #0D0D0C;
+    &:hover {
+        fill: aliceblue;
+        transition: .5s ease;
+        text-decoration: none;
+        color: $primary-dark;
+        text-decoration: none;
+        border: 1px solid $pury-white;
+        background: linear-gradient(276.45deg, $primary-normal -27.33%, $primary-light 91.21%);;
+       
+    }
+}
+
+.btn-2:hover #Arrow{
+    transition: .5s ease;
+    fill: $primary-dark;
+}
+
+.btn {
+    border: 1px solid $trasparent-color;
+    padding: 8px 32px;
+    font-weight: 500;
+    color: $pury-white;
+   
+    
+
+     &:hover {
+        transition: .5s ease;
+        text-decoration: none;
+        color: #0D0D0C;
+        text-decoration: none;
+        background: linear-gradient(276.45deg, $primary-normal -27.33%, $primary-light 91.21%);;
+       
+    }
+
+
+
+   
+
+    
+}
+
+.btn:hover #Arrow{
+    transition: .5s ease;
+    fill: #0D0D0C;
+}
+
+.model {
+    width: 218px;
+    padding: 8px 12px;
+    border-radius: 50px;
+    background-color: $trasparent-color-green;
+}
+
+.model-2 {
+    display: grid;
+    align-items: center;
+    border: 2px #ffffff1f solid;
+    background-color: $trasparent-color;
+    border-radius: 2px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+
+
+
+
+   
+   
+ 
+
+
+
+

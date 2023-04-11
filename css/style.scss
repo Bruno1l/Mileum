@@ -1,0 +1,99 @@
+*,*::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+@import "./partials/colors";
+@import "./partials/layout";
+@import "./partials/typography";
+@import "./partials/buttons";
+@import "./partials/spacing";
+@import "./partials/animations";
+@import "./partials/footer";
+@import "./partials/icons";
+@import "./partials/menu";
+@import "./partials/progressbar";
+@import "./partials/slider";
+@import "./partials/forms";
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    scroll-behavior: smooth;
+    background-color: #0D0D0C;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+@import "./partials/slider";
+@import "./partials/menu";
+@import "./partials/icons";
+@import "./partials/colors";
+@import "./partials/animations";
+@import "./partials/footer";
+@import "./partials/progressbar";
+
+
+.page {
+    position: absolute;
+    top: 32px;
+    left: 57%;
+    z-index: -1;
+
+    @include reponsive (s) {
+       
+        left: 0;
+        width: 116%;
+        height: 358px;
+        position: relative;
+    }
+
+  
+
+}
+
+.show {
+    display: block;
+  }
+
+
+  .top-description {
+    width: 100%;
+    top: 5px;
+    left: 0;
+    position: absolute;
+
+    & hr {
+        border-color: $trasparent-color;
+        height: 1px;
+
+    }
+
+    & p {
+        color: $trasparent-color;
+        padding: 10px 10px;
+    }
+
+  }
+
+  .blur {
+    
+    backdrop-filter: blur(16px);
+}
+  
+
+  
+
+
+

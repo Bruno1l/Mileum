@@ -1,0 +1,114 @@
+header {
+    width: 100%;
+    border-bottom: 1px $trasparent-color dashed;
+    padding: 0 32px;
+}
+
+.navbar-desktop {
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    @include reponsive (all) {
+        display: none;
+    }
+}
+
+
+
+.menu-desktop {
+    list-style: none;
+
+}
+
+.nav-link-desktop {
+    display: inline-block;
+    padding: 12px 16px;
+    
+}
+
+// MOBILE //
+
+.navbar-mobile,.menu-mobile {
+    display: none;
+    @include reponsive(all) {
+        display: block;
+    }
+
+
+
+
+    
+
+}
+
+.navbar-mobile{
+    max-width: $container-xl;
+    margin: 0;
+    padding: 12px 28px;
+
+    @include reponsive(all) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.bx {
+    
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    z-index: 800;
+    transition: 6s ease;
+
+   
+}
+
+.menu-mobile {
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: $trasparent-color;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+   // background: scroll;
+    overflow-y: hi;
+
+    pointer-events: none;
+}
+
+.menu-mobile.active{
+    overflow-y: hidden;
+    transition: .6s ease;
+    pointer-events: all;
+    opacity: 1;
+}
+
+.nav-list-mobile{
+    max-width: $container-xl;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-link-mobile {
+    display: inline-block;
+    @include typeface-1(h2,desktop);
+    padding: 16px 24px;
+
+    
+}
+
+// MOBILE END //
+
+

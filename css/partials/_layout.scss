@@ -1,0 +1,462 @@
+// Layout of project
+
+// Container devices 
+
+$container-xl: 1112px;
+$container-l: 960px;
+$container-m: 540px;
+$container-s: 375px;
+
+// Media query
+
+@mixin reponsive ($device) {
+    // screen > 1112px
+    @if $device == xl {
+        @media screen and (min-width: $container-xl){
+            @content;
+        }
+    }
+
+     // 1112px < screen > 960px
+     @if $device == l {
+        @media screen and (max-width: $container-xl) and (min-width: $container-l){
+            @content;
+        }
+    }
+
+         // 960px < screen > 540px
+     @if $device == m {
+        @media screen and (max-width: $container-l) and (min-width: $container-m){
+            @content;
+        }
+    }
+
+     // Screen less than 375px
+     @if $device == s {
+        @media screen and (max-width: $container-m){
+            @content;
+        }
+    }
+        // 960 --- 375
+    @if $device == all {
+        @media  screen and (max-width: $container-l) and (min-width: $container-s) {
+            @content
+            
+        }
+    }
+}
+
+
+// HERO
+
+.container {
+
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 96px 32px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+
+   
+
+    @include reponsive(s) {
+        flex-direction: column;
+        padding: 32px 32px;
+        
+    }
+
+}
+
+.row {
+    @include reponsive(s) {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+}
+
+
+center-position {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+.flex-item-1 {
+    flex: 1 1 400px;
+
+    @include reponsive(s) {
+        padding: 16px 0;
+        flex: 1;
+    }
+}
+   
+
+.flex-item-2 {
+    flex: 2 1 360px;
+
+    @include reponsive(s) {
+        flex: 1;
+    }
+}
+
+.flex-item-auto {
+    flex: 2 1 auto;
+}
+
+
+.bg-home{
+    top: 0;
+    width: 100%;
+    height: 160%;
+    overflow: hidden;
+    z-index: -1;
+    position:absolute;
+
+    @include reponsive(s) {
+        width: 100%;
+        height: 120%;
+        overflow-x: hidden;
+
+        
+            .bg {
+                width: 268%;
+            
+        }
+    }
+}
+
+
+
+
+
+.list-item {  
+    list-style: none;
+    position: relative;
+    
+    padding: 8px 8px 8px 42px;
+
+    &::after{
+        content:'' ;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 22px;
+        height: 32px;
+       
+       
+    }
+
+    @include reponsive(s) {
+        margin: 16px;
+        
+    }
+
+    
+
+   
+    
+}
+
+ul.list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    @include reponsive(s) {
+        
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.border {
+    border: 1px red solid;
+}
+
+
+// Grid-Background
+
+.Section__background {
+    pointer-events: none;
+    position: fixed;
+    height: 100vh;
+   
+    width: 100%;
+    
+    overflow: hidden;
+}
+
+.Guides {   
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 ;
+    pointer-events: none;
+}
+
+.Guides {
+    max-width: var(--windowWidth);
+}
+
+.Guides__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    max-width: calc($container-xl + 43px);
+    margin: 0 auto;
+    padding: 0 32px;
+    left: 0;
+    height: 100%;
+    margin: 0 auto;
+
+    @include reponsive(all) {
+        grid-template-columns: 1fr 1fr 1fr;
+
+         .Guides__guide:nth-child(2) {
+            display: none;
+        }
+    }
+
+    @include reponsive(s) {
+        grid-template-columns: 1fr 1fr;
+
+         .Guides__guide:nth-child(3) {
+            display: none;
+        }
+    }
+    
+}
+
+
+
+.Guides__guide {
+    
+    border-right: 1px $trasparent-color-2 dashed ;
+    width: 100%;
+    background: transparent;
+    background-size: 1px 8px;
+
+    &:first-of-type {
+        border-left: 1px $trasparent-color-2 solid ;
+
+    }
+
+    &:last-of-type {
+        border-left: none;
+        border-right: $trasparent-color-2 1px solid;
+    }
+}
+
+
+
+#servicos {
+
+    .page-stack {
+        margin: 32px 0 -70px;
+        width: 76%;
+
+        @include reponsive(s) {
+            margin: 32px 0px -38px;
+    width: 165%;
+        }
+    }
+
+   
+    @include reponsive(xl) {
+
+        text-align: center;
+    }
+
+    @include reponsive(p) {
+
+    &.flex-item-1 .page-stack {
+        width: 117%;
+    }
+}
+
+
+
+
+
+.box {
+    width: $container-xl;
+    padding: 96px 0px 96px 32px;
+    margin: 0 auto;
+
+    @include reponsive(s) {
+        width: 100%;
+        padding: 32px 32px;
+        
+    }
+
+}
+
+
+
+.wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .carousel {
+        white-space: nowrap;
+    
+    }
+    
+
+    
+
+}
+
+.carousel {
+    perspective: 100px;
+    animation: scroll 15s linear infinite;
+
+    &:hover {
+        transition: 2s;
+        animation-play-state: paused ;
+    }
+   
+    
+}
+
+
+
+
+.carousel img {   
+    width: calc(96px * 7);
+    
+
+    @include reponsive(s) {
+       width: calc(60px *7);
+    }
+}
+
+
+
+.wrapper::before, .wrapper::after  {
+    background: linear-gradient(to right,#0d0d0c5b 0%, rgba(255,255,255,0) 80% );
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.wrapper::after {
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+
+
+.carousel img {
+    transition: transform 1s;
+    cursor: pointer;
+
+    &:hover { 
+        margin-left: 3px;
+        transform: translateZ(1px) ;
+        box-shadow: 44px 22px 22px rgba(29, 29, 29, 0.123);
+    
+    }
+
+}
+
+
+.faixa {
+   padding: 24px 0;
+   margin: 0;
+   display: flex;
+   overflow-x: hidden;
+
+    background-color: $primary-normal;
+    transform: rotate(0deg);
+    
+    
+
+    &::before, &::after {
+        background: linear-gradient(to right,#0d0d0ccb 0%, rgba(255,255,255,0) 80% );
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 15%;
+        pointer-events: none;
+        z-index: 2;
+        top: 0;
+       
+
+    }
+
+    
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        margin: 0 30px;
+
+       
+
+       h3 {
+        color: #0d0d0c74;
+       }
+
+       img {
+        margin-right: 11px;
+        
+       }
+    }
+
+   
+   
+}
+
+.faixa::after {
+    right: 0;
+    top: 0;
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+  
+
+    
+}
+
+#quemsomos {
+    @extend#servicos
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
